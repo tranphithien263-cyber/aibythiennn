@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FF-AI — Trợ lý Free Fire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="aurora"></div>
+<div class="grid-overlay"></div>
+
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M12 7l-4 2.5v5L12 17l4-2.5v-5L12 7z" fill="currentColor" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h1>FF-AI</h1>
+        <span>Trợ lý Free Fire</span>
+      </div>
+    </div>
+    <button id="clearBtn" class="ghost-btn" title="Xóa hội thoại">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M3 6h18M8 6V4a1 1 0 011-1h6a1 1 0 011 1v2M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/>
+      </svg>
+    </button>
+  </header>
+
+  <main id="chat" class="chat">
+    <div class="welcome">
+      <div class="welcome-icon">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M12 7l-4 2.5v5L12 17l4-2.5v-5L12 7z" fill="currentColor" opacity="0.4"/>
+        </svg>
+      </div>
+      <h2>Hỏi gì về Free Fire?</h2>
+      <p>Nhân vật, súng, pet, rank, kỹ thuật — có số liệu, có combo, có meta.</p>
+      <div class="suggestions">
+        <button class="chip" data-q="Combo nhân vật tốt nhất cho rush trong Clash Squad mùa này?">Combo rush CS</button>
+        <button class="chip" data-q="So sánh súng M4A1 và AK47 về damage, recoil, range?">M4A1 vs AK47</button>
+        <button class="chip" data-q="Cách drag headshot chuẩn cho người mới, settings độ nhạy bao nhiêu?">Drag headshot</button>
+        <button class="chip" data-q="Pet nào tốt nhất cho rank BR, tier list pet mùa này?">Tier pet BR</button>
+        <button class="chip" data-q="Cách lên rank Kim Cương nhanh trong BR, chiến thuật rotation và bo?">Lên Kim Cương</button>
+        <button class="chip" data-q="Nhân vật nào kỹ năng tốt nhất cho solo vs squad?">Solo vs squad</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="composer">
+    <div class="composer-inner">
+      <textarea id="input" placeholder="Hỏi về Free Fire..." rows="1" autocomplete="off"></textarea>
+      <button id="send" class="send-btn" disabled>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M13 6l6 6-6 6"/>
+        </svg>
+      </button>
+    </div>
+    <div class="composer-hint">Enter để gửi · Shift+Enter xuống dòng</div>
+  </footer>
+</div>
+
+<script src="./app.js"></script>
+</body>
+    </html>
